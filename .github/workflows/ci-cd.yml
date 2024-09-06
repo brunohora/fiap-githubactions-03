@@ -1,0 +1,13 @@
+name: Fluxo de trabalho para automatizar criação de imagem docker
+
+on:
+    push:
+        branches: 
+        - main
+jobs:
+    create-docker-image:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4
